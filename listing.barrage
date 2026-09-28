@@ -1,0 +1,43 @@
+# keepn
+
+> A custom file type plus a .kind declaration and a checker that says whether a keepn file is valid.
+
+## Purpose
+Explain keepn so anyone can see it is a named format with a validator. Source: fitzyracing1/keepn.
+
+## How it works (plain English)
+1. Declare the type in a .kind file.
+2. Write a sample .keepn file.
+3. Run the checker.
+4. Keep the file if the checker says it is valid.
+
+## Key ideas
+- .keepn (the file people write)
+- .kind (the short declaration of what that type is)
+- Validator (a program that says yes or no)
+
+## The actual code
+```
+# source: fitzyracing1/keepn
+write .kind declaration
+write sample .keepn
+run validator
+```
+
+## Line-by-line translation
+1. write .kind declaration → “name the type and its rules”
+2. write sample .keepn → “make one example file”
+3. run validator → “ask the checker if the example follows the rules”
+
+## Decisions the program makes
+- If the file matches the kind → pass
+- If it does not → fail and keep the original text for repair
+
+## What a person would notice
+A small custom type with a yes-or-no checker, not a hidden format.
+
+## Current status
+Barrage clone.
+
+## Next possible steps
+Open the source repo and run the validator on one sample.
